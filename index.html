@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Oma Nimi</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --border: #dbe4f0;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --max: 1000px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact span,
+    .contact a {
+      text-decoration: none;
+      color: var(--text);
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .list li {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .item-title {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .item-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #eff6ff;
+      color: var(--accent-dark);
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+
+    .actions {
+      text-align: center;
+      margin: 8px 0 24px;
+    }
+
+    button {
+      border: none;
+      background: var(--accent);
+      color: white;
+      padding: 14px 22px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .portfolio {
+      display: none;
+    }
+
+    .portfolio.show {
+      display: block;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .project-links {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .project-links a {
+      display: block;
+      text-decoration: none;
+      color: var(--accent-dark);
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: bold;
+    }
+
+    .project-links a:hover {
+      background: #eef4ff;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 16px;
+      padding-bottom: 24px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .card {
+        padding: 22px;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Oma Nimi</h1>
+      <p>
+        Tähän tulee lyhyt esittely itsestäsi. Kerro esimerkiksi kuka olet,
+        mitä osaat ja millaista työtä tai harjoittelupaikkaa etsit.
+      </p>
+
+      <div class="contact">
+        <span>Sähköposti: oma@email.com</span>
+        <span>Puhelin: 040 123 4567</span>
+        <span>Paikkakunta: Helsinki</span>
+        <a href="https://github.com/kayttajanimi" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card">
+          <h2>Taidot</h2>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Koulutus</h2>
+          <ul class="list">
+            <li>
+              <span class="item-title">Tutkinto / Koulutus</span>
+              <span class="item-subtitle">Oppilaitos • 2022–2026</span>
+            </li>
+            <li>
+              <span class="item-title">Kurssi / Sertifikaatti</span>
+              <span class="item-subtitle">Järjestäjä • 2025</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Työkokemus</h2>
+          <ul class="list">
+            <li>
+              <span class="item-title">Työnimike</span>
+              <span class="item-subtitle">Yritys • 2024–nykyhetki</span>
+              <p>Kuvaa tähän tärkeimmät vastuut ja saavutukset.</p>
+            </li>
+            <li>
+              <span class="item-title">Työnimike</span>
+              <span class="item-subtitle">Yritys • 2022–2024</span>
+              <p>Kerro tähän mitä teit ja mitä opit.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Profiili</h2>
+          <p>
+            Tämä osio toimii lyhyenä CV-esittelynä. Voit kirjoittaa tähän
+            vahvuuksiasi, tavoitteitasi ja sen, millaisista projekteista tai
+            työtehtävistä olet kiinnostunut.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div class="actions">
+      <button id="portfolioBtn">Avaa portfolio</button>
+    </div>
+
+    <section id="portfolio" class="card portfolio">
+      <h2>Portfolio</h2>
+      <p>
+        Lisää tähän projektiesi GitHub-linkit. Voit myös kirjoittaa lyhyen
+        kuvauksen jokaisesta projektista.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/kayttajanimi/projekti-1" target="_blank">Projekti 1 – Lisää tähän projektin nimi</a>
+        <a href="https://github.com/kayttajanimi/projekti-2" target="_blank">Projekti 2 – Lisää tähän projektin nimi</a>
+        <a href="https://github.com/kayttajanimi/projekti-3" target="_blank">Projekti 3 – Lisää tähän projektin nimi</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Oma Nimi</p>
+    </footer>
+  </div>
+
+  <script>
+    const portfolioBtn = document.getElementById('portfolioBtn');
+    const portfolio = document.getElementById('portfolio');
+
+    portfolioBtn.addEventListener('click', () => {
+      portfolio.classList.toggle('show');
+
+      if (portfolio.classList.contains('show')) {
+        portfolioBtn.textContent = 'Sulje portfolio';
+      } else {
+        portfolioBtn.textContent = 'Avaa portfolio';
+      }
+    });
+  </script>
+</body>
+</html>
