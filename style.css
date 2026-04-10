@@ -202,19 +202,6 @@ footer {
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero,
-  .card {
-    padding: 22px;
- .profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 10px;
-}
 
 /* pakottaa kuvan omalle riville */
 .contact .profile-img {
