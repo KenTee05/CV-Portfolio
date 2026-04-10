@@ -202,33 +202,14 @@ footer {
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
-
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 3px solid #dbe4f0;
-}
-    @media (max-width: 800px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
   }
 
-  .hero-image img {
-    width: 150px;
-    height: 150px;
+  .hero,
+  .card {
+    padding: 22px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
   }
 }
