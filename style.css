@@ -207,15 +207,18 @@ footer {
   .hero,
   .card {
     padding: 22px;
-  }
-  .profile-img {
-  width: 140px;
-  height: 140px;
+ .profile-img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 20px 0;
-  border: 3px solid #dbe4f0;
+  margin-bottom: 10px;
+}
+
+/* pakottaa kuvan omalle riville */
+.contact .profile-img {
+  flex-basis: 100%;
 }
 
   .hero h1 {
