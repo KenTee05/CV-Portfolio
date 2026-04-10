@@ -208,6 +208,15 @@ footer {
   .card {
     padding: 22px;
   }
+  .profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px 0;
+  border: 3px solid #dbe4f0;
+}
 
   .hero h1 {
     font-size: 1.9rem;
