@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV | Teemu Kentta</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Sivun pääkontti -->
   <div class="container">
+
+    <!-- Yläosa / esittely -->
     <header class="hero">
       <h1>Teemu Kentta</h1>
       <p>
-        Olen Teemu Tapani Kentta 21-vuotisa SeAMK opiskelija.
-        Osaan perus tietotekniikka huoltoa, koodausta ja muita tietotekniika asioita.
-        Etsin työpaikkaa mikä avulla pystyisin lisäämään taitoa alalleni.
+        Olen Teemu Tapani Kenttä, 21-vuotias SeAMK-opiskelija.
+        Osaan tietokoneiden huoltoa, ohjelmointia ja muita IT-alan perustehtäviä.
+        Etsin työpaikkaa, jossa voin kehittää osaamistani lisää.
       </p>
 
+      <!-- Yhteystiedot -->
       <div class="contact">
         <span>Sähköposti: kentta.teemu@email.com</span>
         <span>Puhelin: +358 40 9322936</span>
@@ -25,88 +29,57 @@
       </div>
     </header>
 
+    <!-- Sivun pääsisältö -->
     <main class="grid">
       <section>
+        <!-- Taitokortti -->
         <div class="card">
           <h2>Taidot</h2>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS perusteet</span>
-            <span class="tag">JavaScript perusteet</span>
-            <span class="tag">Python keskiverto</span>
-            <span class="tag">C# keskiverto</span>
-            <span class="tag">Git</span>
-            <span class="tag">Microsoft office</span>
-          </div>
+          <ul>
+            <li>HTML</li>
+            <li>CSS perusteet</li>
+            <li>JavaScript perusteet</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Git</li>
+            <li>Microsoft Office</li>
+          </ul>
         </div>
 
+        <!-- Koulutus -->
         <div class="card">
           <h2>Koulutus</h2>
-          <ul class="list">
-            <li>
-              <span class="item-title">Tutkinto / Koulutus</span>
-              <span class="item-subtitle">Suupohjan ammatti instituutti VUOKSI • 2021–2024</span>
-              <span class="item-subtitle">Seamk • 2025–...</span>
-            </li>
-            <li>
-              <span class="item-title">Kurssi / Sertifikaatti</span>
-              <span class="item-subtitle">Järjestäjä • 2025</span>
-            </li>
-          </ul>
+          <p><strong>Datanomi</strong><br>Suupohjan ammatti-instituutti, 2021–2024</p>
+          <p><strong>Tietojenkäsittely</strong><br>SeAMK, 2025–</p>
         </div>
       </section>
 
       <section>
+        <!-- Työkokemus -->
         <div class="card">
           <h2>Työkokemus</h2>
-          <ul class="list">
-            <li>
-              <span class="item-title">Datanomi</span>
-              <span class="item-subtitle">DATABROS OY • 2023–kesä-heinä</span>
-              <p>Olin vastuussa seinäjoen alueen peruskoulujen tietotekniikka laitteiden kuten tietokoneiden
-                aseenuksesta ja huollosta. 
-                Opin miten tälläisessä työssä toimitaan ja asennustöihin liittyviä prosesseja.
-              </p>
-            </li>
-            <li>
-              <span class="item-title">Työnimike</span>
-              <span class="item-subtitle">Yritys • 2022–2024</span>
-              <p>juuu.</p>
-            </li>
-          </ul>
+
+          <h3>Datanomi / Harjoittelija</h3>
+          <p><strong>Databros Oy</strong> | Kesä 2023</p>
+          <p>
+            Asensin ja huolsin tietokoneita Seinäjoen alueen peruskouluihin.
+            Opin laitteiden asennusta, ylläpitoa ja työskentelyä IT-ympäristössä.
+          </p>
         </div>
 
+        <!-- Profiili -->
         <div class="card">
           <h2>Profiili</h2>
           <p>
-            Olen rehti ja reipas työntekijä joka haluaa oppia tietotekniikan hullosta ja tekemisestä.
-            Tavoitteena minulla olisi oppia työkokemuksistani mahdollisimmanpaljon.
+            Olen motivoitunut ja oppimishaluinen työntekijä.
+            Haluan kehittää taitojani tietotekniikan parissa ja saada lisää käytännön kokemusta.
           </p>
         </div>
       </section>
     </main>
 
+    <!-- Portfolio-painike -->
     <div class="actions">
-      <button id="portfolioBtn">Avaa portfolio</button>
+      <button id="portfolioBtn">Näytä portfolio</button>
     </div>
-
-    <section id="portfolio" class="card portfolio">
-      <h2>Portfolio</h2>
-      <p>
-        Lisää tähän projektiesi GitHub-linkit. Voit myös kirjoittaa lyhyen
-        kuvauksen jokaisesta projektista.
-      </p>
-
-      <div class="project-links">
-        <a href="https://github.com/KenTee05/Olio_ohjelmointi" target="_blank">Projekti 1 – Olio-ohjelmointi koulu projekti</a>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2026 Teemu Kentta</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
 </html>
