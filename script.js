@@ -1,17 +1,19 @@
-// Haetaan painike ja portfolio-osio
+// Haetaan painike HTML-sivulta
 const portfolioBtn = document.getElementById('portfolioBtn');
+
+// Haetaan portfolio-osio HTML-sivulta
 const portfolio = document.getElementById('portfolio');
 
 // Lisätään painikkeelle klikkaustapahtuma
-portfolioBtn.addEventListener('click', function() {
-
-  // Vaihdetaan show-luokka päälle/pois
+portfolioBtn.addEventListener('click', () => {
+  // Vaihdetaan näkyvyys päälle/pois
   portfolio.classList.toggle('show');
 
-  // Muutetaan painikkeen teksti tilanteen mukaan
+  // Muutetaan painikkeen teksti tilan mukaan
   if (portfolio.classList.contains('show')) {
-    portfolioBtn.textContent = 'Piilota portfolio';
+    portfolioBtn.textContent = 'Sulje portfolio';
   } else {
-    portfolioBtn.textContent = 'Näytä portfolio';
+    portfolioBtn.textContent = 'Avaa portfolio';
   }
 });
+
