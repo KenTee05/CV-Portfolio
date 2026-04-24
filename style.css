@@ -1,67 +1,249 @@
-/* Perusasetukset koko sivulle */
+/* =========================
+   CSS: Värit ja perusasetukset
+   ========================= */
+:root {
+  /* Sivuston värimuuttujat */
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --border: #dbe4f0;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius: 18px;
+  --max: 1000px;
 }
 
-/* Kahden sarakkeen asettelu */
+/* Nollaa selaimen oletusmarginaalit */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sivun yleinen ulkoasu */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 24px;
+}
+
+/* Sisällön keskitys */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* Hero-osio */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px;
+  margin-bottom: 24px;
+}
+
+/* Otsikon tyyli */
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+/* Esittelytekstin tyyli */
+.hero p {
+  color: var(--muted);
+  max-width: 700px;
+}
+
+/* Yhteystietojen asettelu */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Yhteystietojen ja linkkien tyyli */
+.contact span,
+.contact a {
+  text-decoration: none;
+  color: var(--text);
+  background: #f8fbff;
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* Kahden sarakkeen ruudukko */
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  gap: 24px;
 }
 
-/* Kortit */
+/* Korttien tyyli */
 .card {
-  background: white;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  margin-bottom: 24px;
 }
 
-/* Taitolista */
-.card ul {
-  padding-left: 20px;
+/* Korttien otsikot */
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
 }
 
-/* Painike */
+/* Listojen ulkoasu */
+.list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+/* Listaelementti */
+.list li {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+/* Poistaa viimeisen viivan */
+.list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Listan pääotsikko */
+.item-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Listan alaotsikko */
+.item-subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Taitotagit */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Yksittäinen tagi */
+.tag {
+  background: #eff6ff;
+  color: var(--accent-dark);
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+/* Painikkeen keskitys */
+.actions {
+  text-align: center;
+  margin: 8px 0 24px;
+}
+
+/* Painikkeen tyyli */
 button {
-  background: #0066cc;
-  color: white;
   border: none;
-  padding: 12px 20px;
+  background: var(--accent);
+  color: white;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 999px;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
+/* Hover-efekti */
 button:hover {
-  background: #004c99;
+  background: var(--accent-dark);
+  transform: translateY(-2px);
 }
 
-/* Portfolio piilossa aluksi */
+/* Portfolio on oletuksena piilotettu */
 .portfolio {
   display: none;
 }
 
-/* Näytetään kun JavaScript lisää luokan */
+/* Näytetään portfolio, kun show-luokka lisätään */
 .portfolio.show {
   display: block;
+  animation: fadeIn 0.35s ease;
 }
 
-/* Linkki portfolioon */
-.portfolio a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #0066cc;
+/* Projektien linkkilista */
+.project-links {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Projektin linkki */
+.project-links a {
+  display: block;
   text-decoration: none;
+  color: var(--accent-dark);
+  background: #f8fbff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-weight: bold;
+}
+
+/* Linkin hover-efekti */
+.project-links a:hover {
+  background: #eef4ff;
 }
 
 /* Alatunniste */
 footer {
   text-align: center;
-  margin-top: 20px;
-  color: #666;
+  color: var(--muted);
+  margin-top: 16px;
+  padding-bottom: 24px;
 }
 
-/* Responsiivisuus pienille näytöille */
-@media (max-width: 768px) {
+/* Sisääntuloanimaatio */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiivisuus mobiililaitteille */
+@media (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
+  .hero,
+  .card {
+    padding: 22px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
 }
+</style>
